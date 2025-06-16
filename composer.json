@@ -1,0 +1,41 @@
+{
+    "name": "leemarkwood/pdf",
+    "description": "A Laravel package for generating PDF documents from Blade components using headless Chrome",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lee Mark Wood",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^10.0",
+        "chrome-php/chrome": "^1.9"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "orchestra/testbench": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leemarkwood\\PDF\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Leemarkwood\\PDF\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Leemarkwood\\PDF\\PDFServiceProvider"
+            ],
+            "aliases": {
+                "PDF": "Leemarkwood\\PDF\\Facades\\PDF"
+            }
+        }
+    }
+}
